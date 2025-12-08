@@ -115,7 +115,9 @@ poetry run python manage.py runserver
 
 ````
 
-Acesse no navegador:Sistema: http://127.0.0.1:8000/
+Acesse no navegador:
+
+Sistema: http://127.0.0.1:8000/
 Painel Admin: http://127.0.0.1:8000/admin/
 
 **Este arquivo faz parte da documentação do Projeto Integrador.**
