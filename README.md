@@ -49,7 +49,7 @@ Este sistema foi desenvolvido para resolver problemas de gestão logística, cen
 
 A organização dos diretórios segue o padrão MVC (MVT no Django) para garantir escalabilidade e manutenção.
 
-```bash
+``` bash
 sistema_logistica/
 ├── manage.py              # Script de gerenciamento do Django
 ├── pyproject.toml         # Configuração do Poetry
@@ -61,11 +61,60 @@ sistema_logistica/
     ├── forms.py           # Formulários de edição
     ├── admin.py           # Configuração do Painel Admin
     └── templates/         # Arquivos HTML (Telas do sistema)
-Funcionalidades e RotasO sistema opera com renderização de templates no servidor (Monolito). Abaixo as principais funcionalidades e seus acessos:FuncionalidadeRota (URL)PermissãoDescriçãoPágina Inicial/PúblicaTela de boas-vindas e escolha de perfil.Dashboard/funcionario/Login ObrigatórioLista entregas. Motorista vê apenas as suas; Admin vê tudo.Rastreamento/rastreamento/PúblicaBusca status de entrega por código (ex: CX-01).Editar Entrega/entrega/editar/<id>/Login (Dono da Rota)Permite alterar status para "Entregue".Admin/admin/SuperusuárioGestão completa de Motoristas, Veículos e Rotas.Configuração do AmbienteSiga os passos abaixo para rodar o projeto na sua máquina local.Clone o repositório:Bashgit clone [https://github.com/lupiilluy/PI.git](https://github.com/lupiilluy/PI.git)
+
+Funcionalidades e RotasO sistema opera com renderização de templates no servidor (Monolito).
+Abaixo as principais funcionalidades e seus acessos:Funcionalidade,Rota (URL),Permissão,Descrição
+Página Inicial,/,Pública,Tela de boas-vindas e escolha de perfil.
+Dashboard,/funcionario/,Login Obrigatório,Lista entregas. Motorista vê apenas as suas; Admin vê tudo.
+Rastreamento,/rastreamento/,Pública,Busca status de entrega por código (ex: CX-01).
+Editar Entrega,/entrega/editar/<id>/,Login (Dono da Rota),"Permite alterar status para ""Entregue""."
+Admin,/admin/,Superusuário,"Gestão completa de Motoristas, Veículos e Rotas.
+```
+
+## Configuração do Ambiente
+
+Siga os passos abaixo para rodar o projeto na sua máquina local.
+
+**Clone o repositório:**
+
+``` bash
+git clone [https://github.com/lupiilluy/PI.git](https://github.com/lupiilluy/PI.git)
 cd PI/sistema_logistica
-Instale as dependências:Bashpip install -r requirements.txt
+```
+**Instale as dependências:**
+
+``` bash
+
+pip install -r requirements.txt
 # Ou, se preferir Poetry: poetry install
-Configure o Banco de Dados:Bashpython manage.py migrate
-Crie um Usuário Administrador:Bashpython manage.py createsuperuser
-Inicie o Servidor:Bashpython manage.py runserver
-Acesse no navegador:Sistema: http://127.0.0.1:8000/Painel Admin: http://127.0.0.1:8000/admin/Este arquivo faz parte da documentação do Projeto Integrador.
+
+```
+
+**Configure o Banco de Dados:**
+
+```` bash
+
+poetry run python manage.py migrate
+
+````
+
+**Crie um Usuário Administrador:**
+
+```` bash
+
+poetry run python manage.py createsuperuser
+
+````
+
+**Inicie o Servidor:**
+
+```` bash
+
+poetry run python manage.py runserver
+
+````
+
+Acesse no navegador:Sistema: http://127.0.0.1:8000/
+Painel Admin: http://127.0.0.1:8000/admin/
+
+**Este arquivo faz parte da documentação do Projeto Integrador.**
