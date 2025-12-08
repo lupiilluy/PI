@@ -12,7 +12,7 @@
 ## Desenvolvedora
 
 **Ana Luiza Martins de Sousa**
-*Projeto Integrador - Curso de Tecnologia em Sistemas para Internet (IFB)*
+*Projeto Integrador - Desenvolvimento de Software com Formação BackEnd - Python com Django*
 
 ---
 
@@ -62,14 +62,15 @@ sistema_logistica/
     ├── admin.py           # Configuração do Painel Admin
     └── templates/         # Arquivos HTML (Telas do sistema)
 
-Funcionalidades e RotasO sistema opera com renderização de templates no servidor (Monolito).
-Abaixo as principais funcionalidades e seus acessos:Funcionalidade,Rota (URL),Permissão,Descrição
-Página Inicial,/,Pública,Tela de boas-vindas e escolha de perfil.
-Dashboard,/funcionario/,Login Obrigatório,Lista entregas. Motorista vê apenas as suas; Admin vê tudo.
-Rastreamento,/rastreamento/,Pública,Busca status de entrega por código (ex: CX-01).
-Editar Entrega,/entrega/editar/<id>/,Login (Dono da Rota),"Permite alterar status para ""Entregue""."
-Admin,/admin/,Superusuário,"Gestão completa de Motoristas, Veículos e Rotas.
-```
+````
+
+## Funcionalidades Principais
+
+* **Gestão de Entregas:** Cadastro completo com validação de capacidade de carga.
+* **Controle de Frota:** Cadastro de veículos e motoristas, com vínculo de usuários do sistema.
+* **Planejamento de Rotas:** Associação de múltiplas entregas a um único veículo/motorista.
+* **Rastreamento Público:** Área externa para consulta de status via código de rastreio.
+* **Painel Administrativo:** Gestão total do sistema para administradores.
 
 ## Configuração do Ambiente
 
