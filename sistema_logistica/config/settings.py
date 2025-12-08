@@ -124,5 +124,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Redirecionamento após Login/Logout
-LOGIN_REDIRECT_URL = 'funcionario'   # Vai para a página inicial (sua lista de entregas)
+LOGIN_REDIRECT_URL = '/funcionario/'   # Vai para a página inicial (sua lista de entregas)
 LOGOUT_REDIRECT_URL = '/accounts/login/' # Volta para o login ao sair
