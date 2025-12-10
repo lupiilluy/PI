@@ -1,6 +1,6 @@
 # Sistema de Gestão de Logística e Entregas
 
-[![Python](https://img.shields.io/badge/Python-3.12%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/Django-5.0-green.svg?logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57.svg?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![Status](https://img.shields.io/badge/Status-Concluído-success)](https://github.com/)
@@ -22,7 +22,7 @@
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
 * [Estrutura do Projeto](#estrutura-do-projeto)
 * [Funcionalidades e Rotas](#funcionalidades-e-rotas)
-* [Configuração do Ambiente](#configuração-do-ambiente)
+* [Como Rodar o Projeto](#como-rodar-o-projeto) 
 
 ---
 
@@ -62,7 +62,7 @@ sistema_logistica/
     ├── admin.py           # Configuração do Painel Admin
     └── templates/         # Arquivos HTML (Telas do sistema)
 
-````
+```
 
 ## Funcionalidades Principais
 
@@ -72,15 +72,16 @@ sistema_logistica/
 * **Rastreamento Público:** Área externa para consulta de status via código de rastreio.
 * **Painel Administrativo:** Gestão total do sistema para administradores.
 
-## Configuração do Ambiente
+## Como Rodar o Projeto
 
 Siga os passos abaixo para rodar o projeto na sua máquina local.
 
 **Clone o repositório:**
 
 ``` bash
-git clone [https://github.com/lupiilluy/PI.git](https://github.com/lupiilluy/PI.git)
+git clone https://github.com/lupiilluy/PI.git
 cd PI/sistema_logistica
+
 ```
 **Instale as dependências:**
 
@@ -93,27 +94,27 @@ pip install -r requirements.txt
 
 **Configure o Banco de Dados:**
 
-```` bash
+``` bash
 
 poetry run python manage.py migrate
 
-````
+```
 
 **Crie um Usuário Administrador:**
 
-```` bash
+``` bash
 
 poetry run python manage.py createsuperuser
 
-````
+```
 
 **Inicie o Servidor:**
 
-```` bash
+``` bash
 
 poetry run python manage.py runserver
 
-````
+```
 
 Acesse no navegador:
 
