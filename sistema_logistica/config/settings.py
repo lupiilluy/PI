@@ -126,3 +126,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Redirecionamento após Login/Logout
 LOGIN_REDIRECT_URL = '/funcionario/'   # Vai para a página inicial (sua lista de entregas)
 LOGOUT_REDIRECT_URL = '/accounts/login/' # Volta para o login ao sair
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.app.github.dev',
+    'https://*.github.dev',
+    'https://localhost:8000',
+    'http://127.0.0.1:8000',
+]

@@ -1,4 +1,4 @@
 asgiref==3.11.0
 Django==5.2.9
--e git+https://github.com/lupiilluy/PI@cb153698c3189d89fa181f98455208f062daf17f#egg=sistema_logistica&subdirectory=sistema_logistica
+-e git+https://github.com/lupiilluy/PI@509f3f854e745663969bd1d0da5a375440487271#egg=sistema_logistica&subdirectory=sistema_logistica
 sqlparse==0.5.4

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.http import HttpResponseForbidden
 from .models import Entrega
 from .forms import EntregaForm
@@ -24,7 +25,7 @@ def lista_entregas(request):
 def editar_entrega(request, id):
     entrega = get_object_or_404(Entrega, id=id)
 
-    # Validação de Segurança (Só dono ou admin mexe)
+    # Validação de Segurança
     if not request.user.is_superuser:
         if not hasattr(request.user, 'motorista') or entrega.rota.motorista != request.user.motorista:
             return HttpResponseForbidden("Você não tem permissão para editar esta entrega.")
@@ -33,6 +34,9 @@ def editar_entrega(request, id):
         form = EntregaForm(request.POST, instance=entrega)
         if form.is_valid():
             form.save()
+            # --- LINHA NOVA ABAIXO ---
+            messages.success(request, "✅ Status da entrega atualizado com sucesso!")
+            # -------------------------
             return redirect('home')
     else:
         form = EntregaForm(instance=entrega)
