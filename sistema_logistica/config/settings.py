@@ -133,3 +133,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://localhost:8000',
     'http://127.0.0.1:8000',
 ]
+
+# Redireciona para o login do Admin se o usuário não estiver autenticado
+LOGIN_URL = '/admin/login/'
+LOGIN_REDIRECT_URL = '/funcionario/'  # Para onde vai depois de logar
